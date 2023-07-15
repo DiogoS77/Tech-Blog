@@ -3,10 +3,8 @@
 <div class="row mb-4 post">
   <div class="">
     <h2>
-      {{!-- Use link-to helper to generate the anchor tag --}}
-      {{#link-to 'post' this.id}}
-        {{tittle}}
-      {{/link-to}}
+      {{!-- Generate the anchor tag manually --}}
+      <a href="/post/{{id}}">{{tittle}}</a>
     </h2>
     <p>Created by {{user.name}} on {{format_date createdAt}}</p>
   </div>
