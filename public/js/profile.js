@@ -1,12 +1,11 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const title = document.querySelector('#title').value.trim();
-  const body = document.querySelector('#body').value.trim();
-  const id = document.querySelector('#/').value.trim();
+  const title = document.querySelector('#post-title').value.trim();
+  const body = document.querySelector('#post-body').value.trim();
 
   if (title && body) {
-    const response = await fetch(`/api/profile`, {
+    const response = await fetch('/api/posts', {
       method: 'POST',
       body: JSON.stringify({ title, body }),
       headers: {
@@ -23,7 +22,7 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
+  if (event.target.classList.contains('btn-danger')) {
     const id = event.target.getAttribute('data-id');
 
     const response = await fetch(`/api/posts/${id}`, {
@@ -41,7 +40,6 @@ const delButtonHandler = async (event) => {
 document
   .querySelector('.new-post-form')
   .addEventListener('submit', newFormHandler);
-
 document
   .querySelector('.post-list')
   .addEventListener('click', delButtonHandler);
