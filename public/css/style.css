@@ -1,4 +1,5 @@
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -21,4 +22,40 @@ header, .project:not(:last-child) {
   color: #056605;
   font-weight: bold;
   margin-left: -5px;
+}
+
+/* Navbar styles */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* Set the height of the navbar */
+}
+
+nav a {
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px; /* Increase the font size for the navbar links */
+  font-family: 'Arial', sans-serif; /* Use Arial font for the links */
+  text-transform: uppercase; /* Convert the text to uppercase */
+  transition: color 0.3s; /* Add a smooth transition effect on hover */
+}
+
+nav a:hover {
+  color: #ffc107; /* Change the link color on hover (yellow) */
+}
+
+/* Logout button styles */
+#logout {
+  padding: 10px 20px;
+  font-size: 18px; /* Increase the font size for the button text */
+  font-family: 'Arial', sans-serif; /* Use Arial font for the button */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add a smooth transition effect on hover */
+}
+
+#logout:hover {
+  background-color: #c82333; /* Change the button background color on hover (darker red) */
 }

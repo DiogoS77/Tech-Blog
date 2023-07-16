@@ -1,17 +1,13 @@
-{{!-- Loop over each object in the posts array --}}
+<!-- Loop over each object in the posts array -->
 {{#each posts}}
-<div class="row mb-4 post">
-  <div class="">
+<div class="card mb-4">
+  <div class="card-body">
     <h2>
       {{!-- Generate the anchor tag manually --}}
-      <a href="/post/{{id}}">{{tittle}}</a>
+      <a href="/post/{{id}}">{{title}}</a>
     </h2>
     <p>Created by {{user.name}} on {{format_date createdAt}}</p>
-  </div>
-  <div class="">
-    <p>
-      {{body}}
-    </p>
+    <p>{{body}}</p>
   </div>
 </div>
 {{/each}}
