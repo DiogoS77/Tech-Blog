@@ -40,7 +40,7 @@ const hideEditForm = () => {
 const editFormHandler = async (event) => {
   event.preventDefault();
 
-  const postId = '{{postId}}'; // Replace with the actual post ID
+  const postId = '{{postId}}';
 
   const title = document.querySelector('#edit-post-title').value.trim();
   const body = document.querySelector('#edit-post-body').value.trim();
