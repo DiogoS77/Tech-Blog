@@ -40,7 +40,7 @@ const hideEditForm = () => {
 const editFormHandler = async (event) => {
   event.preventDefault();
 
-  const postId = '{{postId}}';
+  const postId = event.target.getAttribute('data-id');
 
   const title = document.querySelector('#edit-post-title').value.trim();
   const body = document.querySelector('#edit-post-body').value.trim();
@@ -80,12 +80,12 @@ const delButtonHandler = async (event) => {
 
 document
   .querySelector('.new-post-form')
-  .addEventListener('submit', newFormHandler);
+  ?.addEventListener('submit', newFormHandler);
 document
   .querySelector('.post-list')
-  .addEventListener('click', delButtonHandler);
-document.querySelector('.edit-btn').addEventListener('click', showEditForm);
-document.querySelector('.cancel-btn').addEventListener('click', hideEditForm);
+  ?.addEventListener('click', delButtonHandler);
+document.querySelector('.edit-btn')?.addEventListener('click', showEditForm);
+document.querySelector('.cancel-btn')?.addEventListener('click', hideEditForm);
 document
   .querySelector('.edit-form')
-  .addEventListener('submit', editFormHandler);
+  ?.addEventListener('submit', editFormHandler);
