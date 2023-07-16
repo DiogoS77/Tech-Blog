@@ -4,6 +4,19 @@
   <p>{{user.name}}: {{format_date createdAt}}</p>
 </div>
 
+{{!-- Check if there are comments and display them if they exist --}}
+{{#if comments}}
+  <div class="card mb-4">
+    <div class="card-body">
+      <h4>Comments</h4>
+      {{!-- Loop through comments and display each one --}}
+      {{#each comments}}
+        <p>{{this}}</p>
+      {{/each}}
+    </div>
+  </div>
+{{/if}}
+
 {{!-- Form to add a new comment --}}
 <div class="card mb-4">
   <div class="card-body">
@@ -23,5 +36,3 @@
 </div>
 
 <script src="/js/comment.js"></script>
-
-
