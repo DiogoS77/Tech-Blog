@@ -2,10 +2,35 @@
   <h2>{{title}}</h2>
   <p>{{{body}}}</p>
   <p>{{user.name}}: {{format_date createdAt}}</p>
+</div>
 
-  {{!-- Wrap the buttons in a single <div> element --}}
-  <div>
-    <a href="/" class="btn btn-primary">More Posts</a>
-    <a href="/" class="btn btn-primary">New Post</a>
+{{!-- Comment section --}}
+<div class="card mb-4">
+  <div class="card-body">
+    <h4>Comments</h4>
+    <ul class="list-group comment-list">
+      {{#each comments}}
+        <li class="list-group-item">{{this.body}}</li>
+      {{/each}}
+    </ul>
   </div>
 </div>
+
+{{!-- Form to add a new comment --}}
+<div class="card mb-4">
+  <div class="card-body">
+    <h4>Add Comment</h4>
+    <form class="new-comment-form">
+      <div class="form-group">
+        <textarea class="form-control" id="comment-body" rows="3" placeholder="Enter your comment"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Comment</button>
+    </form>
+  </div>
+</div>
+
+<div>
+  <a href="/" class="btn btn-primary">More Posts</a>
+  <a href="/" class="btn btn-primary">New Post</a>
+</div>
+
