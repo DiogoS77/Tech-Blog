@@ -48,7 +48,7 @@ router.get('/nocomment/:id', async (req, res) => {
 
     const post = postData.get({ plain: true });
 
-    res.render('post', {
+    res.render('nocomment', {
       ...post,
       logged_in: req.session.logged_in,
     });
