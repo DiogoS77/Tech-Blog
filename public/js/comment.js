@@ -5,14 +5,14 @@ const submitCommentHandler = async (event) => {
   const postId = window.location.toString().split('/').slice(-1)[0];
 
   if (comment) {
-    const response = await fetch(`/api/post/${postId}/comments`, {
+    const response = await fetch(`/api/comments`, {
       method: 'POST',
       body: JSON.stringify({ body: comment }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.reload();
+      console.log('Response OK');
     } else {
       alert('Failed to add comment.');
     }
