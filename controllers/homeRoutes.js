@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
     res.render('homepage', {
       posts,
       logged_in: req.session.logged_in,
+      user_id: req.session.user_id,
     });
   } catch (err) {
     console.log('Error', err);
@@ -26,7 +27,13 @@ router.get('/', async (req, res) => {
 router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
-      include: [{ model: Comment }, { model: User }],
+      include: [
+        User,
+        {
+          model: Comment,
+          include: [User],
+        },
+      ],
     });
 
     const post = postData.get({ plain: true });
