@@ -12,6 +12,7 @@
       {{!-- Loop through comments and display each one --}}
       {{#each comments}}
         <p>{{body}}</p>
+        <p>{{user.name}}: {{format_date createdAt}}</p>
       {{/each}}
     </div>
   </div>
