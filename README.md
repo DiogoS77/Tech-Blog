@@ -78,28 +78,24 @@ npm i
 
 To use this repository is pretty easy. You will have to clone the repo , and when you clone it and open it, you will need to open your terminal and run the following command (npm i). After you runned this command you will need to login in your mysql by doing (mysql -u root -p) and then you will be asked to type your password. After typing your password and getting inside mysql you will need to run (source/db/schema.sql) and then type (quit;) to leave the mysql. After leaving the mysql you will need to run this following commands in your mysql (npm run seed) and after run (npm run start). After running this 2 commands you will be able to go to your localhost in the browser and use the blog. Or the easier way is to go to the deployed application  
 
-![End Result]()
+![End Result](./images/blog-page.png)
+
+Deployed Application: https://tech-blog-bootcamp-c686f3216563.herokuapp.com/
 
 ## Tests
 
 I will be listing the tests i have done.
 
 ```
-Tested - 
-Tested - 
-Tested - 
-Tested - 
-Tested - 
-Tested - 
-Tested - 
-Tested - 
-Tested - 
-Tested - 
-Tested - 
-Tested - 
-Tested - 
-Tested - 
-Tested - 
+Tested - Able to Login
+Tested - Able to Sign Up
+Tested - Able to Create Post
+Tested - Able to Delete Post
+Tested - Able to Update Post
+Tested - Able to View Other Posts
+Tested - Able to Open Posts
+Tested - Able to Comment on Posts
+Tested - Able to Logout
 ```
 
 ## License
@@ -114,3 +110,4 @@ For any questions or inquiries, feel free to reach out to me:
 
 - GitHub: [DiogoS77](https://github.com/DiogoS77)
 - Email: diogo.messi.18@hotmail.com
+Deployed Application: https://tech-blog-bootcamp-c686f3216563.herokuapp.com/
