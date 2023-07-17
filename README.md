@@ -48,11 +48,15 @@ THEN I am able to view posts and comments but I am prompted to log in again befo
 
 ## Description
 
+This project consists in a Tech Blog that will allow us to either create our own post, Delete it, Update it, Check other posts and leave a comment on them. So this project helps in put all devs together in a blog so they can all make their own posts and comment on other peoples vlog. This project contains 1 SQL file, 6 handlebars files, 19 JavaScript files, 2 CSS files and 1 .env file.
 
+The biggest challenge for me during this project was definitly not having an actual starter code and having to either do everything or repurpose everything. Another big issue i faced was going into issues and not being able to debug them since i was getting responde from it , and not getting any errors , so i ended up spending most of the time actually fixing issues and getting them to be fixed and work.
 
-- 
-- 
-- 
+This challenge helped me a lot because it made my understanding of Handlebars much better and also made more confident while working with Heroku and displaying on it. There was a few more point in where this challenge helped me that i will be listing bellow
+
+- Faster working with Handlebars
+- Better understanding of JavaScript
+- Higher Heroku understanding
 
 ## Table of Contents
 
@@ -72,7 +76,7 @@ npm i
 
 ## Usage
 
-
+To use this repository is pretty easy. You will have to clone the repo , and when you clone it and open it, you will need to open your terminal and run the following command (npm i). After you runned this command you will need to login in your mysql by doing (mysql -u root -p) and then you will be asked to type your password. After typing your password and getting inside mysql you will need to run (source/db/schema.sql) and then type (quit;) to leave the mysql. After leaving the mysql you will need to run this following commands in your mysql (npm run seed) and after run (npm run start). After running this 2 commands you will be able to go to your localhost in the browser and use the blog. Or the easier way is to go to the deployed application  
 
 ![End Result]()
 
