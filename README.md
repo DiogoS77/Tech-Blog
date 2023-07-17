@@ -110,4 +110,5 @@ For any questions or inquiries, feel free to reach out to me:
 
 - GitHub: [DiogoS77](https://github.com/DiogoS77)
 - Email: diogo.messi.18@hotmail.com
+
 Deployed Application: https://tech-blog-bootcamp-c686f3216563.herokuapp.com/
